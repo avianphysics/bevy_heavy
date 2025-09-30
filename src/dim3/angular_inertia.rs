@@ -3,7 +3,7 @@ use core::ops::*;
 use bevy_math::{Mat3, Quat, Vec3};
 #[cfg(all(feature = "bevy_reflect", feature = "serialize"))]
 use bevy_reflect::{ReflectDeserialize, ReflectSerialize};
-use glam_matrix_extensions::{MatConversionError, SymmetricEigen3, SymmetricMat3};
+use glam_matrix_extras::{MatConversionError, SymmetricEigen3, SymmetricMat3};
 
 /// An error returned for an invalid [`AngularInertiaTensor`] in 3D.
 #[derive(Clone, Copy, Debug, PartialEq)]

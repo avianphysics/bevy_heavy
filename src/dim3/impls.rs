@@ -8,7 +8,7 @@ use bevy_math::{
     },
     FloatPow, Quat, Vec3,
 };
-use glam_matrix_extensions::SymmetricMat3;
+use glam_matrix_extras::SymmetricMat3;
 
 impl ComputeMassProperties3d for Sphere {
     #[inline]
