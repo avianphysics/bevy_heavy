@@ -65,7 +65,6 @@ or `ComputeMassProperties3d` for them.
 
 | `bevy_math` | `bevy_heavy` |
 | ----------- | ------------ |
-| 0.17        | `main`       |
 | 0.16        | 0.2          |
 | 0.15        | 0.1          |
 

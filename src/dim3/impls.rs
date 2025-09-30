@@ -3,8 +3,8 @@ use bevy_math::{
     ops,
     prelude::Tetrahedron,
     primitives::{
-        Capsule3d, Cone, ConicalFrustum, Cuboid, Cylinder, Line3d, Measured3d, Plane3d, Polyline3d,
-        Segment3d, Sphere, Torus,
+        BoxedPolyline3d, Capsule3d, Cone, ConicalFrustum, Cuboid, Cylinder, Line3d, Measured3d,
+        Plane3d, Polyline3d, Segment3d, Sphere, Torus,
     },
     FloatPow, Quat, Vec3,
 };
@@ -625,8 +625,9 @@ macro_rules! impl_zero_mass_properties_3d {
 impl_zero_mass_properties_3d!(Plane3d);
 impl_zero_mass_properties_3d!(Line3d);
 impl_zero_mass_properties_3d!(Segment3d);
+impl_zero_mass_properties_3d!(BoxedPolyline3d);
 
-impl ComputeMassProperties3d for Polyline3d {
+impl<const N: usize> ComputeMassProperties3d for Polyline3d<N> {
     #[inline]
     fn mass(&self, _density: f32) -> f32 {
         0.0
