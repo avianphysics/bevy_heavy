@@ -47,13 +47,13 @@ std = ["bevy_math/std", "glam_matrix_extras/std"]
 [dependencies]
 # Math
 approx = { version = "0.5", optional = true }
-bevy_math = { version = "0.17.0-rc", default-features = false }
+bevy_math = { version = "0.17.0", default-features = false }
 glam_matrix_extras = { git = "https://github.com/Jondolf/glam_matrix_extras", default-features = false, features = [
     "f32",
 ] }
 
 # Serialization
-bevy_reflect = { version = "0.17.0-rc", default-features = false, optional = true }
+bevy_reflect = { version = "0.17.0", default-features = false, optional = true }
 serde = { version = "1.0", default-features = false, optional = true }
 
 [dev-dependencies]
@@ -62,7 +62,7 @@ bevy_heavy = { path = ".", features = ["approx"] }
 
 # Math
 approx = { version = "0.5", default-features = false }
-bevy_math = { version = "0.17.0-rc", default-features = false, features = [
+bevy_math = { version = "0.17.0", default-features = false, features = [
     "std",
     "approx",
     "rand",
