@@ -4,7 +4,7 @@ use bevy_math::{
     prelude::Tetrahedron,
     primitives::{
         Capsule3d, Cone, ConicalFrustum, Cuboid, Cylinder, Line3d, Measured3d, Plane3d, Polyline3d,
-        Segment3d, Sphere, Torus,
+        Segment3d, Sphere, Torus, Triangle3d,
     },
     FloatPow, Quat, Vec3,
 };
@@ -625,6 +625,7 @@ macro_rules! impl_zero_mass_properties_3d {
 impl_zero_mass_properties_3d!(Plane3d);
 impl_zero_mass_properties_3d!(Line3d);
 impl_zero_mass_properties_3d!(Segment3d);
+impl_zero_mass_properties_3d!(Triangle3d);
 
 impl ComputeMassProperties3d for Polyline3d {
     #[inline]
