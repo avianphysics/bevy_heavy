@@ -1,12 +1,11 @@
 use super::{AngularInertiaTensor, ComputeMassProperties3d, MassProperties3d};
 use bevy_math::{
-    ops,
+    FloatPow, Quat, Vec3, ops,
     prelude::Tetrahedron,
     primitives::{
         Capsule3d, Cone, ConicalFrustum, Cuboid, Cylinder, Line3d, Measured3d, Plane3d, Polyline3d,
         Segment3d, Sphere, Torus, Triangle3d,
     },
-    FloatPow, Quat, Vec3,
 };
 use glam_matrix_extras::SymmetricMat3;
 
@@ -675,8 +674,8 @@ mod tests {
 
     use approx::assert_relative_eq;
     use bevy_math::{
-        bounding::{Bounded3d, BoundingVolume},
         Isometry3d, ShapeSample, Vec3Swizzles,
+        bounding::{Bounded3d, BoundingVolume},
     };
     use rand::SeedableRng;
 

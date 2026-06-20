@@ -1,12 +1,11 @@
 use super::{ComputeMassProperties2d, MassProperties2d};
 use bevy_math::{
-    ops,
+    FloatPow, Vec2, ops,
     primitives::{
         Annulus, Arc2d, Capsule2d, Circle, CircularSector, CircularSegment, ConvexPolygon, Ellipse,
         Line2d, Measured2d, Plane2d, Polyline2d, Rectangle, RegularPolygon, Rhombus, Segment2d,
         Triangle2d,
     },
-    FloatPow, Vec2,
 };
 
 impl ComputeMassProperties2d for Circle {
